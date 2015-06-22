@@ -37,10 +37,18 @@ abstract class PDOConnection extends Connection {
      * @var \PDO
      */
     private $pdo;
-    public function __construct(\PDO $pdo) {
-        parent::__construct();
-        $this->pdo = $pdo;
+
+    public function connect() {
+        $this->pdo = new \PDO($this->getDSN(), parse_url($this->connectionString, PHP_URL_USER), parse_url($this->connectionString, PHP_URL_PASS), array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION, \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC));
     }
+
+    /**
+     * Build PDO DSN string from Connection String.
+     * Driver-dependant.
+     * @return string Built DSN
+     */
+    abstract protected function getDSN();
+    
     protected function escapeString($string) {
         return $this->pdo->quote($string);
     }
@@ -50,7 +58,7 @@ abstract class PDOConnection extends Connection {
     }
 
     public function prepare($statement) {
-
+        return new PDOPreparedStatement($this, $this->pdo->prepare($statement));
     }
 
     public function query($statement) {
@@ -60,9 +68,4 @@ abstract class PDOConnection extends Connection {
     public function exec($statement) {
         return $this->pdo->exec($statement);
     }
-
-    public function startTransaction($name = null) {
-
-    }
-
 }

@@ -1,3 +1,3 @@
 
 var ApiGen = ApiGen || {};
-ApiGen.elements = [["c","SNDatabase\\PDO\\PDOConnection"],["c","SNDatabase\\PDO\\PDOPreparedStatement"],["c","SNDatabase\\PDO\\PDOResult"]];
+ApiGen.elements = [["c","SNDatabase\\Connection"],["c","SNDatabase\\ConnectionString"],["c","SNDatabase\\DB"],["c","SNDatabase\\Factory"],["c","SNDatabase\\FetchMode"],["c","SNDatabase\\ParameterizedStatement"],["c","SNDatabase\\PDO\\PDOConnection"],["c","SNDatabase\\PDO\\PDOPreparedStatement"],["c","SNDatabase\\PDO\\PDOResult"],["c","SNDatabase\\PreparedStatement"],["c","SNDatabase\\Result"],["c","SNDatabase\\ResultIterator"],["c","SNDatabase\\Statement"],["c","SNDatabase\\Transaction"],["c","SNTools\\NotImplementedException"],["c","SNTools\\Object"],["c","SNTools\\PropertyException"]];

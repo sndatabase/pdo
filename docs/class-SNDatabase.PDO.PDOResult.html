@@ -30,6 +30,11 @@
 
 						</li>
 							</ul></li>
+				<li>
+					<a href="namespace-SNTools.html">
+						SNTools					</a>
+
+						</li>
 			</ul>
 		</div>
 
@@ -97,11 +102,23 @@
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
-SNDatabase\Result
+			<a href="class-SNTools.Object.html"><span>SNTools\Object</span></a>
+			
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-SNDatabase.Result.html"><span>SNDatabase\Result</span></a>
+			
+			 implements 
+<span>Countable</span>, 
+			
+<span>IteratorAggregate</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
 			<img src="resources/inherit.png" alt="Extended by">
 <b><span>SNDatabase\PDO\PDOResult</span></b>			
 			
@@ -147,17 +164,26 @@ SNDatabase\Result
 		<code><a href="source-class-SNDatabase.PDO.PDOResult.html#41-44" title="Go to source code">__construct</a>( <span><code><a href="class-SNDatabase.PDO.PDOConnection.html">SNDatabase\PDO\PDOConnection</a></code> <var>$cnx</var></span>, <span>SNDatabase\PDO\PDOStatement <var>$stmt</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Result set constructor</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Result set constructor</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cnx</var></dt>
+					<dd>Parent connection</dd>
+					<dt><var>$stmt</var></dt>
+					<dd></dd>
+				</dl></div>
 
 
 
 
-
-
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-SNDatabase.Result.html#___construct">SNDatabase\Result::__construct()</a></code></div>
 
 		</div>
 		</div></td>
@@ -167,7 +193,7 @@ SNDatabase\Result
 		<td class="attributes"><code>
 			 protected 
 
-			
+			array|boolean
 			
 			</code>
 		</td>
@@ -177,20 +203,51 @@ SNDatabase\Result
 		<code><a href="source-class-SNDatabase.PDO.PDOResult.html#45-47" title="Go to source code">doFetch</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Driver-specific fetch. Fetch mode is expected to be array_assoc only.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Driver-specific fetch. Fetch mode is expected to be array_assoc only.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					array|boolean<br>fetched row, as associative array. If no row left, returns false.
+				</div>
 
 
 
 
 		</div>
 		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-SNDatabase.Result.html#methods">SNDatabase\Result</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-SNDatabase.Result.html#___get">__get()</a>, 
+			<a href="class-SNDatabase.Result.html#_count">count()</a>, 
+			<a href="class-SNDatabase.Result.html#_fetch">fetch()</a>, 
+			<a href="class-SNDatabase.Result.html#_fetchAll">fetchAll()</a>, 
+			<a href="class-SNDatabase.Result.html#_getIterator">getIterator()</a>, 
+			<a href="class-SNDatabase.Result.html#_setCursorMode">setCursorMode()</a>, 
+			<a href="class-SNDatabase.Result.html#_setFetchMode">setFetchMode()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-SNTools.Object.html#methods">SNTools\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-SNTools.Object.html#___constructStatic">__constructStatic()</a>, 
+			<a href="class-SNTools.Object.html#___isset">__isset()</a>, 
+			<a href="class-SNTools.Object.html#___set">__set()</a>, 
+			<a href="class-SNTools.Object.html#___toString">__toString()</a>, 
+			<a href="class-SNTools.Object.html#___unset">__unset()</a>
+		</code></td>
 	</tr>
 	</table>
 
@@ -208,7 +265,15 @@ SNDatabase\Result
 
 
 
-
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="class-SNDatabase.Result.html#properties">SNDatabase\Result</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-SNDatabase.Result.html#m$connection"><var>$connection</var></a>, 
+			<a href="class-SNDatabase.Result.html#m$numRows"><var>$numRows</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 </div>

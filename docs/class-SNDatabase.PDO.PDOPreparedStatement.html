@@ -30,6 +30,11 @@
 
 						</li>
 							</ul></li>
+				<li>
+					<a href="namespace-SNTools.html">
+						SNTools					</a>
+
+						</li>
 			</ul>
 		</div>
 
@@ -97,11 +102,28 @@
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
-SNDatabase\PreparedStatement
+			<a href="class-SNTools.Object.html"><span>SNTools\Object</span></a>
+			
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-SNDatabase.Statement.html"><span>SNDatabase\Statement</span></a>
+			
+			 implements 
+<span>SNDatabase\ParameterTypes</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-SNDatabase.PreparedStatement.html"><span>SNDatabase\PreparedStatement</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
 			<img src="resources/inherit.png" alt="Extended by">
 <b><span>SNDatabase\PDO\PDOPreparedStatement</span></b>			
 			
@@ -147,17 +169,26 @@ SNDatabase\PreparedStatement
 		<code><a href="source-class-SNDatabase.PDO.PDOPreparedStatement.html#42-45" title="Go to source code">__construct</a>( <span><code><a href="class-SNDatabase.PDO.PDOConnection.html">SNDatabase\PDO\PDOConnection</a></code> <var>$cnx</var></span>, <span>PDOStatement <var>$stmt</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Statement constructor</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Statement constructor</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cnx</var></dt>
+					<dd>Parent connection</dd>
+					<dt><var>$stmt</var></dt>
+					<dd></dd>
+				</dl></div>
 
 
 
 
-
-
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-SNDatabase.Statement.html#___construct">SNDatabase\Statement::__construct()</a></code></div>
 
 		</div>
 		</div></td>
@@ -177,11 +208,11 @@ SNDatabase\PreparedStatement
 		<code><a href="source-class-SNDatabase.PDO.PDOPreparedStatement.html#46-66" title="Go to source code">doBind</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Driver-specific parameter rebinding. Called upon execution.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Driver-specific parameter rebinding. Called upon execution.</p>
 
 
 
@@ -197,7 +228,7 @@ SNDatabase\PreparedStatement
 		<td class="attributes"><code>
 			 protected 
 
-			
+			boolean
 			
 			</code>
 		</td>
@@ -207,14 +238,18 @@ SNDatabase\PreparedStatement
 		<code><a href="source-class-SNDatabase.PDO.PDOPreparedStatement.html#68-70" title="Go to source code">doExecute</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Driver-specific execution, called upon execution and after parameter rebinding</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Driver-specific execution, called upon execution and after parameter rebinding</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>Success
+				</div>
 
 
 
@@ -227,7 +262,7 @@ SNDatabase\PreparedStatement
 		<td class="attributes"><code>
 			 protected 
 
-			
+			integer
 			
 			</code>
 		</td>
@@ -237,14 +272,18 @@ SNDatabase\PreparedStatement
 		<code><a href="source-class-SNDatabase.PDO.PDOPreparedStatement.html#72-74" title="Go to source code">getAffectedRows</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Number of rows affected by last INSERT, UPDATE or DELETE statement</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Number of rows affected by last INSERT, UPDATE or DELETE statement</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>Number of rows
+				</div>
 
 
 
@@ -257,7 +296,7 @@ SNDatabase\PreparedStatement
 		<td class="attributes"><code>
 			 public 
 
-			
+			Result|null
 			
 			</code>
 		</td>
@@ -267,20 +306,56 @@ SNDatabase\PreparedStatement
 		<code><a href="source-class-SNDatabase.PDO.PDOPreparedStatement.html#76-78" title="Go to source code">getResultset</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Get result set after execution</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Get result set after execution</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					Result|null<br>Result set. Null if N/A
+				</div>
 
 
 
 
 		</div>
 		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-SNDatabase.PreparedStatement.html#methods">SNDatabase\PreparedStatement</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-SNDatabase.PreparedStatement.html#_bindParam">bindParam()</a>, 
+			<a href="class-SNDatabase.PreparedStatement.html#_bindValue">bindValue()</a>, 
+			<a href="class-SNDatabase.PreparedStatement.html#_execute">execute()</a>, 
+			<a href="class-SNDatabase.PreparedStatement.html#_getParameters">getParameters()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-SNDatabase.Statement.html#methods">SNDatabase\Statement</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-SNDatabase.Statement.html#___get">__get()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-SNTools.Object.html#methods">SNTools\Object</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-SNTools.Object.html#___constructStatic">__constructStatic()</a>, 
+			<a href="class-SNTools.Object.html#___isset">__isset()</a>, 
+			<a href="class-SNTools.Object.html#___set">__set()</a>, 
+			<a href="class-SNTools.Object.html#___toString">__toString()</a>, 
+			<a href="class-SNTools.Object.html#___unset">__unset()</a>
+		</code></td>
 	</tr>
 	</table>
 
@@ -298,7 +373,15 @@ SNDatabase\PreparedStatement
 
 
 
-
+	<table class="summary inherited">
+	<caption>Magic properties inherited from <a href="class-SNDatabase.Statement.html#properties">SNDatabase\Statement</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-SNDatabase.Statement.html#m$affectedRows"><var>$affectedRows</var></a>, 
+			<a href="class-SNDatabase.Statement.html#m$connection"><var>$connection</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 </div>

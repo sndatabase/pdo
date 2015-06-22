@@ -1,5 +1,7 @@
 source:
     - src
+    - vendor/sndatabase/core/src
+    - vendor/sntools/core/src
 
 destination: docs
 title: "SN Database PDO Plugin"
