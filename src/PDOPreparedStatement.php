@@ -66,7 +66,12 @@ class PDOPreparedStatement extends PreparedStatement {
     }
 
     protected function doExecute() {
-        return $this->stmt->execute();
+        try {
+            return $this->stmt->execute();
+        }
+        catch(\PDOException $ex) {
+            throw new \SNDatabase\ConnectionFailedException($ex->errorInfo[2], $ex->getCode(), $ex);
+        }
     }
 
     protected function getAffectedRows() {

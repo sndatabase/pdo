@@ -59,6 +59,13 @@
 
 
 
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-SNDatabase.ConnectionFailedException.html">ConnectionFailedException</a></li>
+				<li><a href="class-SNDatabase.DBException.html">DBException</a></li>
+				<li><a href="class-SNDatabase.DriverException.html">DriverException</a></li>
+				<li><a href="class-SNDatabase.InvalidParameterNumberException.html">InvalidParameterNumberException</a></li>
+			</ul>
 
 
 		</div>
@@ -144,7 +151,7 @@
 				<a href="https://github.com/sndatabase/core/blob/master/LICENSE">MIT</a><br>
 				<b>Author:</b>
 				Samy Naamani <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#x61;&#109;y&#x40;&#110;&#x61;&#109;&#x61;&#110;&#x69;&#46;&#x6e;&#101;&#116;">&#115;&#x61;&#109;y&#x40;&#110;&#x61;&#109;&#x61;&#110;&#x69;&#46;&#x6e;&#101;&#116;</a><br>
-			<b>Located at</b> <a href="source-class-SNDatabase.Connection.html#31-238" title="Go to source code">Connection.php</a>
+			<b>Located at</b> <a href="source-class-SNDatabase.Connection.html#31-273" title="Go to source code">Connection.php</a>
 		<br>
 	</div>
 
@@ -164,7 +171,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#52-60" title="Go to source code">__construct</a>( <span>string <var>$connectionString</var></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#58-70" title="Go to source code">__construct</a>( <span>string <var>$connectionString</var></span> )</code>
 
 		<div class="description short">
 			<p>Connection constructor</p>
@@ -181,6 +188,10 @@
 				</dl></div>
 
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-SNDatabase.ConnectionFailedException.html">SNDatabase\ConnectionFailedException</a></code>
+				</div>
 
 
 				<h4>Overrides</h4>
@@ -201,7 +212,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___get">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#62-69" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#72-79" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Property getters handler.
@@ -246,6 +257,82 @@ readable properties (example : with switch)</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="getAttribute" id="_getAttribute">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAttribute">#</a>
+		<code><a href="source-class-SNDatabase.Connection.html#81-88" title="Go to source code">getAttribute</a>( <span>string <var>$attr</var></span> )</code>
+
+		<div class="description short">
+			<p>Gets attribute value</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets attribute value</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attr</var></dt>
+					<dd>Attribute name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>Attribute value
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAttribute" id="_setAttribute">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAttribute">#</a>
+		<code><a href="source-class-SNDatabase.Connection.html#90-97" title="Go to source code">setAttribute</a>( <span>string <var>$attr</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets attribute value</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets attribute value</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attr</var></dt>
+					<dd>Attribute name</dd>
+					<dt><var>$value</var></dt>
+					<dd>Attribute value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="connect" id="_connect">
 
 		<td class="attributes"><code>
@@ -258,7 +345,7 @@ readable properties (example : with switch)</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_connect">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#71-75" title="Go to source code">connect</a>( )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#99-104" title="Go to source code">connect</a>( )</code>
 
 		<div class="description short">
 			<p>Establish connection, using connection string.
@@ -272,6 +359,10 @@ Driver-dependant</p>
 
 
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-SNDatabase.ConnectionFailedException.html">SNDatabase\ConnectionFailedException</a></code>
+				</div>
 
 
 
@@ -290,7 +381,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDefaultFetchMode">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#77-83" title="Go to source code">getDefaultFetchMode</a>( )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#106-112" title="Go to source code">getDefaultFetchMode</a>( )</code>
 
 		<div class="description short">
 			<p>Public getter for default fetch mode</p>
@@ -324,7 +415,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDefaultFetchMode">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#85-91" title="Go to source code">setDefaultFetchMode</a>( <span><code><a href="class-SNDatabase.FetchMode.html">SNDatabase\FetchMode</a></code> <var>$defaultFetchMode</var></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#114-120" title="Go to source code">setDefaultFetchMode</a>( <span><code><a href="class-SNDatabase.FetchMode.html">SNDatabase\FetchMode</a></code> <var>$defaultFetchMode</var></span> )</code>
 
 		<div class="description short">
 			<p>Non-public setter for default fetch mode</p>
@@ -359,7 +450,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_startTransaction">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#94-99" title="Go to source code">startTransaction</a>( <span>string|null <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#123-129" title="Go to source code">startTransaction</a>( <span>string|null <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Starts a new transaction</p>
@@ -380,6 +471,10 @@ Driver-dependant</p>
 					<code><a href="class-SNDatabase.Transaction.html">SNDatabase\Transaction</a></code><br>Transaction object
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-SNDatabase.DBException.html">SNDatabase\DBException</a></code>
+				</div>
 
 
 
@@ -398,7 +493,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_prepare">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#101-106" title="Go to source code">prepare</a>( <span>string <var>$statement</var></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#131-137" title="Go to source code">prepare</a>( <span>string <var>$statement</var></span> )</code>
 
 		<div class="description short">
 			<p>Creates a prepared statement</p>
@@ -419,6 +514,10 @@ Driver-dependant</p>
 					<code><a href="class-SNDatabase.PreparedStatement.html">SNDatabase\PreparedStatement</a></code>
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-SNDatabase.DBException.html">SNDatabase\DBException</a></code>
+				</div>
 
 
 
@@ -437,7 +536,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_perform">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#108-115" title="Go to source code">perform</a>( <span>string <var>$statement</var></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#139-146" title="Go to source code">perform</a>( <span>string <var>$statement</var></span> )</code>
 
 		<div class="description short">
 			<p>Creates a statement with parameters</p>
@@ -476,7 +575,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_query">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#117-122" title="Go to source code">query</a>( <span>string <var>$statement</var></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#148-154" title="Go to source code">query</a>( <span>string <var>$statement</var></span> )</code>
 
 		<div class="description short">
 			<p>Executes a simple query and returns its result set</p>
@@ -497,6 +596,10 @@ Driver-dependant</p>
 					<code><a href="class-SNDatabase.Result.html">SNDatabase\Result</a></code>
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-SNDatabase.DBException.html">SNDatabase\DBException</a></code>
+				</div>
 
 
 
@@ -515,7 +618,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_exec">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#124-131" title="Go to source code">exec</a>( <span>string <var>$statement</var></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#156-164" title="Go to source code">exec</a>( <span>string <var>$statement</var></span> )</code>
 
 		<div class="description short">
 			<p>Executes a write-only statement and returns how many rows it affected.</p>
@@ -536,6 +639,10 @@ Driver-dependant</p>
 					integer<br>Number of affected rows
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-SNDatabase.DBException.html">SNDatabase\DBException</a></code>
+				</div>
 
 
 
@@ -554,7 +661,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_countLastAffectedRows">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#133-137" title="Go to source code">countLastAffectedRows</a>( )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#166-171" title="Go to source code">countLastAffectedRows</a>( )</code>
 
 		<div class="description short">
 			<p>Number of rows affected by last statement</p>
@@ -570,6 +677,10 @@ Driver-dependant</p>
 					integer
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-SNDatabase.DBException.html">SNDatabase\DBException</a></code>
+				</div>
 
 
 
@@ -588,7 +699,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_lastInsertId">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#139-143" title="Go to source code">lastInsertId</a>( )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#173-178" title="Go to source code">lastInsertId</a>( )</code>
 
 		<div class="description short">
 			<p>Last inserted ID</p>
@@ -604,6 +715,10 @@ Driver-dependant</p>
 					integer
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-SNDatabase.DBException.html">SNDatabase\DBException</a></code>
+				</div>
 
 
 
@@ -622,7 +737,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_escapeString">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#145-151" title="Go to source code">escapeString</a>( <span>string <var>$string</var></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#180-186" title="Go to source code">escapeString</a>( <span>string <var>$string</var></span> )</code>
 
 		<div class="description short">
 			<p>For text and string values to quote, protects against injection.
@@ -663,7 +778,7 @@ Driver-dependant.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_quote">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#153-208" title="Go to source code">quote</a>( <span>mixed <var>$value</var></span>, <span>integer <var>$type</var> = <code><a href="class-SNDatabase.DB.html#PARAM_AUTO">SNDatabase\DB::<b>PARAM_AUTO</b></a></code></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#188-243" title="Go to source code">quote</a>( <span>mixed <var>$value</var></span>, <span>integer <var>$type</var> = <code><a href="class-SNDatabase.DB.html#PARAM_AUTO">SNDatabase\DB::<b>PARAM_AUTO</b></a></code></span> )</code>
 
 		<div class="description short">
 			<p>Quote parameter according to type, to protect against injections</p>
@@ -700,7 +815,7 @@ Driver-dependant.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_quotedType">#</a>
-		<code><a href="source-class-SNDatabase.Connection.html#210-236" title="Go to source code">quotedType</a>( <span> <var>$value</var></span> )</code>
+		<code><a href="source-class-SNDatabase.Connection.html#245-271" title="Go to source code">quotedType</a>( <span> <var>$value</var></span> )</code>
 
 		<div class="description short">
 			

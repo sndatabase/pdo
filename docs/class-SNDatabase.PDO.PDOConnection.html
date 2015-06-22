@@ -137,7 +137,7 @@
 
 				<b>Author:</b>
 				Samy Naamani <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#x61;&#109;y&#x40;&#110;&#x61;&#109;&#x61;&#110;&#x69;&#46;&#x6e;&#101;&#116;">&#115;&#x61;&#109;y&#x40;&#110;&#x61;&#109;&#x61;&#110;&#x69;&#46;&#x6e;&#101;&#116;</a><br>
-			<b>Located at</b> <a href="source-class-SNDatabase.PDO.PDOConnection.html#29-71" title="Go to source code">PDOConnection.php</a>
+			<b>Located at</b> <a href="source-class-SNDatabase.PDO.PDOConnection.html#29-96" title="Go to source code">PDOConnection.php</a>
 		<br>
 	</div>
 
@@ -157,7 +157,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_connect">#</a>
-		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#41-43" title="Go to source code">connect</a>( )</code>
+		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#41-48" title="Go to source code">connect</a>( )</code>
 
 		<div class="description short">
 			<p>Establish connection, using connection string.
@@ -171,6 +171,10 @@ Driver-dependant</p>
 
 
 
+				<h4>Throws</h4>
+				<div class="list">
+					ConnectionFailedException
+				</div>
 
 
 
@@ -189,7 +193,7 @@ Driver-dependant</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDSN">#</a>
-		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#45-50" title="Go to source code">getDSN</a>( )</code>
+		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#50-55" title="Go to source code">getDSN</a>( )</code>
 
 		<div class="description short">
 			<p>Build PDO DSN string from Connection String.
@@ -225,7 +229,7 @@ Driver-dependant.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_escapeString">#</a>
-		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#52-54" title="Go to source code">escapeString</a>( <span>string <var>$string</var></span> )</code>
+		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#57-59" title="Go to source code">escapeString</a>( <span>string <var>$string</var></span> )</code>
 
 		<div class="description short">
 			<p>For text and string values to quote, protects against injection.
@@ -266,7 +270,7 @@ Driver-dependant.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_lastInsertId">#</a>
-		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#56-58" title="Go to source code">lastInsertId</a>( )</code>
+		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#61-68" title="Go to source code">lastInsertId</a>( )</code>
 
 		<div class="description short">
 			<p>Last inserted ID</p>
@@ -282,6 +286,10 @@ Driver-dependant.</p>
 					integer
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					DBException
+				</div>
 
 
 
@@ -300,7 +308,7 @@ Driver-dependant.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_prepare">#</a>
-		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#60-62" title="Go to source code">prepare</a>( <span>string <var>$statement</var></span> )</code>
+		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#70-77" title="Go to source code">prepare</a>( <span>string <var>$statement</var></span> )</code>
 
 		<div class="description short">
 			<p>Creates a prepared statement</p>
@@ -321,6 +329,10 @@ Driver-dependant.</p>
 					PreparedStatement
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					DBException
+				</div>
 
 
 
@@ -339,7 +351,7 @@ Driver-dependant.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_query">#</a>
-		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#64-66" title="Go to source code">query</a>( <span>string <var>$statement</var></span> )</code>
+		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#79-86" title="Go to source code">query</a>( <span>string <var>$statement</var></span> )</code>
 
 		<div class="description short">
 			<p>Executes a simple query and returns its result set</p>
@@ -360,6 +372,10 @@ Driver-dependant.</p>
 					Result
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					DBException
+				</div>
 
 
 
@@ -378,7 +394,7 @@ Driver-dependant.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_exec">#</a>
-		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#68-70" title="Go to source code">exec</a>( <span>string <var>$statement</var></span> )</code>
+		<code><a href="source-class-SNDatabase.PDO.PDOConnection.html#88-95" title="Go to source code">exec</a>( <span>string <var>$statement</var></span> )</code>
 
 		<div class="description short">
 			<p>Executes a write-only statement and returns how many rows it affected.</p>
@@ -399,6 +415,10 @@ Driver-dependant.</p>
 					integer<br>Number of affected rows
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					DBException
+				</div>
 
 
 				<h4>Overrides</h4>
@@ -416,10 +436,12 @@ Driver-dependant.</p>
 			<a href="class-SNDatabase.Connection.html#___construct">__construct()</a>, 
 			<a href="class-SNDatabase.Connection.html#___get">__get()</a>, 
 			<a href="class-SNDatabase.Connection.html#_countLastAffectedRows">countLastAffectedRows()</a>, 
+			<a href="class-SNDatabase.Connection.html#_getAttribute">getAttribute()</a>, 
 			<a href="class-SNDatabase.Connection.html#_getDefaultFetchMode">getDefaultFetchMode()</a>, 
 			<a href="class-SNDatabase.Connection.html#_perform">perform()</a>, 
 			<a href="class-SNDatabase.Connection.html#_quote">quote()</a>, 
 			<a href="class-SNDatabase.Connection.html#_quotedType">quotedType()</a>, 
+			<a href="class-SNDatabase.Connection.html#_setAttribute">setAttribute()</a>, 
 			<a href="class-SNDatabase.Connection.html#_setDefaultFetchMode">setDefaultFetchMode()</a>, 
 			<a href="class-SNDatabase.Connection.html#_startTransaction">startTransaction()</a>
 		</code></td>

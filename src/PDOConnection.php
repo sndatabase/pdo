@@ -39,7 +39,12 @@ abstract class PDOConnection extends Connection {
     private $pdo;
 
     public function connect() {
-        $this->pdo = new \PDO($this->getDSN(), parse_url($this->connectionString, PHP_URL_USER), parse_url($this->connectionString, PHP_URL_PASS), array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION, \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC));
+        try {
+            $this->pdo = new \PDO($this->getDSN(), parse_url($this->connectionString, PHP_URL_USER), parse_url($this->connectionString, PHP_URL_PASS), array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION, \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC));
+        }
+        catch(\PDOException $ex) {
+            throw new \SNDatabase\ConnectionFailedException($ex->errorInfo[2], $ex->getCode(), $ex);
+        }
     }
 
     /**
@@ -54,18 +59,38 @@ abstract class PDOConnection extends Connection {
     }
 
     public function lastInsertId() {
-        return $this->pdo->lastInsertId();
+        try {
+            return $this->pdo->lastInsertId();
+        }
+        catch(\PDOException $ex) {
+            throw new \SNDatabase\ConnectionFailedException($ex->errorInfo[2], $ex->getCode(), $ex);
+        }
     }
 
     public function prepare($statement) {
-        return new PDOPreparedStatement($this, $this->pdo->prepare($statement));
+        try {
+            return new PDOPreparedStatement($this, $this->pdo->prepare($statement));
+        }
+        catch(\PDOException $ex) {
+            throw new \SNDatabase\ConnectionFailedException($ex->errorInfo[2], $ex->getCode(), $ex);
+        }
     }
 
     public function query($statement) {
-        return new PDOResult($this, $this->pdo->query($statement));
+        try {
+            return new PDOResult($this, $this->pdo->query($statement));
+        }
+        catch(\PDOException $ex) {
+            throw new \SNDatabase\ConnectionFailedException($ex->errorInfo[2], $ex->getCode(), $ex);
+        }
     }
     
     public function exec($statement) {
-        return $this->pdo->exec($statement);
+        try {
+            return $this->pdo->exec($statement);
+        }
+        catch(\PDOException $ex) {
+            throw new \SNDatabase\ConnectionFailedException($ex->errorInfo[2], $ex->getCode(), $ex);
+        }
     }
 }
