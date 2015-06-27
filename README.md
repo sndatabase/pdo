@@ -6,7 +6,7 @@ This particular package brings the PDO Plugin of the api : some driver will use 
 
 # Download
 
-The easiest way to download the core tools is through Composer. Simply add the following to your composer requirements, where "~1.0" can be replaced by any version you need :
+This package is a requirement for actual drivers, and will be downloaded automatically by Composer upon requiring a driver.
 
 ```
 "sndb/core": "~1.0"
@@ -16,13 +16,15 @@ The easiest way to download the core tools is through Composer. Simply add the f
 
 Cannot be used on its own, you need to download a driver that uses it, or create your own.
 
-# API Reference
+To generate the documentation, use the apigen.neon file to generate it in a "docs" folder
 
-More detailed documentation is avilable as HTML files, in the docs/ subfolder.
+```
+> apigen generate
+```
 
 # Testing
 
-Unit tests have been provided, using PHPUnit, in the tests/ subfolder.
+Coming soon, in /tests subfolder...
 
 # Contributors
 
